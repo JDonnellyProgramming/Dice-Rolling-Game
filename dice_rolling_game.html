@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Game</title>
+    <style>
+        body {
+            background-image: radial-gradient(circle 1437px at -2% 103.1%,
+            rgba(182, 32, 180, 1) 0%, rgba(162, 39, 182, 1) 10.5%,
+            rgba(116, 55, 180, 1) 100.2%);
+            font-family: sans-serif;
+            text-align: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .dice {
+            display: block;
+            position: relative;
+            padding: 10px 180px;
+        }
+        .row {
+            display: flex;
+            margin-left: 0px;
+        }
+        .col-6 {
+            width: 50%;
+        }
+        .img-dice {
+            border-radius: 24px;
+        }
+        h3 {
+            color: white;
+        }
+        button {
+            margin-top: 40px;
+            height: 54px;
+            border-radius: 4px;
+            font-family: arial;
+            border: none;
+            outline: none;
+            padding: 10px 20px;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        button:hover {
+            color: #5c42ad;
+        }
+        button:active {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="dice">
+        <h2 class="dice-title">Dice Game!!</h2>
+        <div class="row">
+            <div class="col-6">
+                <h3>Player 1</h3>
+                <img src="Dice-1.png" alt="dice" class="img-dice">
+            </div>
+            <div class="col-6">
+                <h3>Player 1</h3>
+                <img src="Dice-2.png" alt="dice" class="img-dice">
+            </div>
+        </div>
+        <h1 class="head"></h1>
+        <button id="dice-btn">Start Game</button>
+    </div>
+    <script>
+         const dice = document.getElementById('dice-btn');
+
+
+         function dicegame() {
+            var randomDice = Math.floor((Math.random()*6)+1);
+            var diceLocation = "Dice-"+randomDice+".png";
+            var img1 = document.querySelectorAll("img")[0];
+            img.setAttribute("src", diceLocation);
+
+
+            var randomDice = Math.floor((Math.random()*6)+1);
+            var diceLocation = "Dice-"+randomDice+".png";
+            var img1 = document.querySelectorAll("img")[0];
+            img.setAttribute("src", diceLocation);
+
+
+         }
+    </script>
+</body>
+</html>
